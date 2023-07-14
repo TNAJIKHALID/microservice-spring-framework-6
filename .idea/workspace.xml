@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b471ed0-8101-40ea-86a5-59f8e8fdb4b9" name="Changes" comment="adding the request interceptor to inject tokent to communicate between all the secured microservices">
-      <change afterPath="$PROJECT_DIR$/docker/configs/prometheus.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/tracing/tracing-compose.yml" afterDir="false" />
+    <list default="true" id="3b471ed0-8101-40ea-86a5-59f8e8fdb4b9" name="Changes" comment="adding distributed tracing with project micrometer and zipkin">
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Gateway-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Gateway-Service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Payment-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Payment-Service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Reporting-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Reporting-Service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/example/gatewayservice/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/example/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +223,7 @@
       <workItem from="1689256573313" duration="5836000" />
       <workItem from="1689282293008" duration="12290000" />
       <workItem from="1689296154360" duration="4735000" />
-      <workItem from="1689321720396" duration="17490000" />
+      <workItem from="1689321720396" duration="23257000" />
     </task>
     <task id="LOCAL-00001" summary="first commit, setUp microservice infrastructure &amp; security with keycloak">
       <created>1689322881750</created>
@@ -263,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689330688009</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="adding distributed tracing with project micrometer and zipkin">
+      <created>1689344838549</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689344838549</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +290,8 @@
     <MESSAGE value="first commit, setUp microservice infrastructure &amp; security with keycloak" />
     <MESSAGE value="adding feing client to communicate between microservices&#10;&#10;adding circuit breaker and a fallback processing to the methods of the feign client" />
     <MESSAGE value="adding the request interceptor to inject tokent to communicate between all the secured microservices" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding the request interceptor to inject tokent to communicate between all the secured microservices" />
+    <MESSAGE value="adding distributed tracing with project micrometer and zipkin" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding distributed tracing with project micrometer and zipkin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
