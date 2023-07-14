@@ -3,10 +3,21 @@ server:
 spring:
   main:
      allow-bean-definition-overriding: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
+          jwk-set-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/certs
+keycloak:
+  enabled: true
+  resource: payment
+  realm: bank
+  auth-server-url: http://localhost:8081/auth
 
 cors:
   allowedAdresses: http://localhost:8080, http://localhost:8081
-  
+
 management:
   endpoints:
     web:

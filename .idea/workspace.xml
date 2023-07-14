@@ -4,259 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b471ed0-8101-40ea-86a5-59f8e8fdb4b9" name="Changes" comment="first commit, setUp microservice infrastructure &amp; security with keycloak">
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#ib_16384_0.dblwr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#ib_16384_1.dblwr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#innodb_temp/temp_1.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#innodb_temp/temp_10.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#innodb_temp/temp_2.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#innodb_temp/temp_3.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#innodb_temp/temp_4.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#innodb_temp/temp_5.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#innodb_temp/temp_6.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#innodb_temp/temp_7.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#innodb_temp/temp_8.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/#innodb_temp/temp_9.ibt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/auto.cnf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/binlog.000001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/binlog.000002" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/binlog.000003" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/binlog.index" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/ca-key.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/ca.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/client-cert.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/client-key.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/ib_buffer_pool" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/ib_logfile0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/ib_logfile1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/ibdata1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/ibtmp1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/admin_event_entity.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/associated_policy.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/authentication_execution.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/authentication_flow.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/authenticator_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/authenticator_config_entry.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/broker_link.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_attributes.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_auth_flow_bindings.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_initial_access.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_node_registrations.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_scope.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_scope_attributes.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_scope_client.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_scope_role_mapping.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_session.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_session_auth_status.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_session_note.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_session_prot_mapper.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_session_role.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/client_user_session_note.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/component.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/component_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/composite_role.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/credential.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/databasechangelog.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/databasechangeloglock.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/default_client_scope.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/event_entity.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/fed_user_attribute.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/fed_user_consent.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/fed_user_consent_cl_scope.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/fed_user_credential.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/fed_user_group_membership.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/fed_user_required_action.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/fed_user_role_mapping.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/federated_identity.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/federated_user.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/group_attribute.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/group_role_mapping.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/identity_provider.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/identity_provider_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/identity_provider_mapper.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/idp_mapper_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/keycloak_group.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/keycloak_role.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/migration_model.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/offline_client_session.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/offline_user_session.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/policy_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/protocol_mapper.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/protocol_mapper_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/realm.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/realm_attribute.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/realm_default_groups.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/realm_enabled_event_types.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/realm_events_listeners.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/realm_localizations.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/realm_required_credential.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/realm_smtp_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/realm_supported_locales.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/redirect_uris.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/required_action_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/required_action_provider.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/resource_attribute.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/resource_policy.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/resource_scope.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/resource_server.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/resource_server_perm_ticket.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/resource_server_policy.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/resource_server_resource.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/resource_server_scope.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/resource_uris.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/role_attribute.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/scope_mapping.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/scope_policy.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_attribute.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_consent.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_consent_client_scope.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_entity.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_federation_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_federation_mapper.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_federation_mapper_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_federation_provider.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_group_membership.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_required_action.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_role_mapping.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_session.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/user_session_note.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/username_login_failure.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/keycloak/web_origins.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/mysql.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/mysql/general_log.CSM" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/mysql/general_log.CSV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/mysql/general_log_213.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/mysql/slow_log.CSM" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/mysql/slow_log.CSV" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/mysql/slow_log_214.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/accounts_145.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/binary_log_trans_189.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/cond_instances_82.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/data_lock_waits_161.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/data_locks_160.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/error_log_83.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_errors_su_139.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_errors_su_140.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_errors_su_141.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_errors_su_142.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_errors_su_143.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_stages_cu_111.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_stages_hi_112.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_stages_hi_113.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_stages_su_114.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_stages_su_115.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_stages_su_116.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_stages_su_117.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_stages_su_118.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_119.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_120.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_121.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_122.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_123.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_124.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_125.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_126.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_127.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_128.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_129.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_statement_130.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_transacti_131.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_transacti_132.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_transacti_133.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_transacti_134.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_transacti_135.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_transacti_136.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_transacti_137.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_transacti_138.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_waits_cur_84.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_waits_his_85.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_waits_his_86.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_waits_sum_87.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_waits_sum_88.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_waits_sum_89.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_waits_sum_90.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_waits_sum_91.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/events_waits_sum_92.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/file_instances_93.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/file_summary_by__94.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/file_summary_by__95.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/global_status_181.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/global_variables_184.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/host_cache_96.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/hosts_146.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/keyring_componen_191.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/keyring_keys_152.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/log_status_174.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/memory_summary_b_154.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/memory_summary_b_155.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/memory_summary_b_156.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/memory_summary_b_157.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/memory_summary_g_153.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/metadata_locks_159.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/mutex_instances_97.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/objects_summary__98.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/performance_time_99.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/persisted_variab_187.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/prepared_stateme_175.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/processlist_100.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_appl_165.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_appl_166.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_appl_167.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_appl_168.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_appl_170.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_appl_171.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_asyn_172.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_asyn_173.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_conn_162.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_conn_164.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_grou_163.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/replication_grou_169.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/rwlock_instances_101.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/session_account__151.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/session_connect__150.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/session_status_182.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/session_variable_185.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/setup_actors_102.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/setup_consumers_103.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/setup_instrument_104.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/setup_objects_105.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/setup_threads_106.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/socket_instances_147.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/socket_summary_b_148.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/socket_summary_b_149.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/status_by_accoun_177.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/status_by_host_178.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/status_by_thread_179.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/status_by_user_180.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/table_handles_158.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/table_io_waits_s_107.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/table_io_waits_s_108.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/table_lock_waits_109.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/threads_110.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/tls_channel_stat_190.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/user_defined_fun_188.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/user_variables_b_176.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/users_144.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/variables_by_thr_183.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/performance_schema/variables_info_186.sdi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/private_key.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/public_key.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/server-cert.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/server-key.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/sys/sys_config.ibd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/undo_001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/data_mysql/undo_002" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/controller/feign/ReportingClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/controller/feign/fallBack/FallbackWithFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/controller/feign/fallBack/ReportingFallbackFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/controller/handler/ExceptionHandlers.java" afterDir="false" />
+    <list default="true" id="3b471ed0-8101-40ea-86a5-59f8e8fdb4b9" name="Changes" comment="adding feing client to communicate between microservices&#10;&#10;adding circuit breaker and a fallback processing to the methods of the feign client">
+      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/src/main/java/com/example/security/starter/keycloak/feign/OAuth2FeignAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/src/main/java/com/example/security/starter/keycloak/feign/OAuth2FeignRequestInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Payment-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Payment-Service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Gateway-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Gateway-Service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Reporting-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Reporting-Service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keycloak-security-starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keycloak-security-starter/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/keycloak-security-starter/src/main/resources/META-INF/spring.factories" beforeDir="false" afterPath="$PROJECT_DIR$/keycloak-security-starter/src/main/resources/META-INF/spring.factories" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/controller/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reporting-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingServiceApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +65,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "corretto-17",
-    "last_opened_file_path": "C:/Users/ktnaji/Documents/formation/mocroservice/TP/tp-parent/payment-service/src/main/java/com/example/paymentservice/controller",
+    "last_opened_file_path": "C:/Users/ktnaji/Documents/formation/mocroservice/TP/tp-parent/keycloak-security-starter/src/main/java/com/example/security/starter/keycloak",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -320,10 +79,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\keycloak-security-starter\src\main\java\com\example\security\starter\keycloak" />
       <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\payment-service\src\main\java\com\example\paymentservice\controller" />
       <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\keycloak-security-starter\src\main\resources" />
       <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\payment-service\src\main\java" />
-      <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\keycloak-security-starter\src\main\java\com\example\security\starter\keycloak" />
       <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\docker" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -441,7 +200,7 @@
       <workItem from="1689256573313" duration="5836000" />
       <workItem from="1689282293008" duration="12290000" />
       <workItem from="1689296154360" duration="4735000" />
-      <workItem from="1689321720396" duration="4865000" />
+      <workItem from="1689321720396" duration="8056000" />
     </task>
     <task id="LOCAL-00001" summary="first commit, setUp microservice infrastructure &amp; security with keycloak">
       <created>1689322881750</created>
@@ -457,11 +216,29 @@
       <option name="project" value="LOCAL" />
       <updated>1689322902066</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adding feing client to communicate between microservices&#10;&#10;adding circuit breaker and a fallback processing to the methods of the feign client">
+      <created>1689326747974</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689326747974</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -474,7 +251,8 @@
       <path value="$PROJECT_DIR$/reporting-service" />
     </ignored-roots>
     <MESSAGE value="first commit, setUp microservice infrastructure &amp; security with keycloak" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit, setUp microservice infrastructure &amp; security with keycloak" />
+    <MESSAGE value="adding feing client to communicate between microservices&#10;&#10;adding circuit breaker and a fallback processing to the methods of the feign client" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding feing client to communicate between microservices&#10;&#10;adding circuit breaker and a fallback processing to the methods of the feign client" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

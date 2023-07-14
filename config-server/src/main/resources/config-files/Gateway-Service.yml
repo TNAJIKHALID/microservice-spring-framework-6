@@ -1,6 +1,10 @@
 server:
   port: 8283
 
+
+
+
+
 spring:
   application:
     name: GATEWAY-SERVICE
