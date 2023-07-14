@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b471ed0-8101-40ea-86a5-59f8e8fdb4b9" name="Changes" comment="adding feing client to communicate between microservices&#10;&#10;adding circuit breaker and a fallback processing to the methods of the feign client">
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/src/main/java/com/example/security/starter/keycloak/feign/OAuth2FeignAutoConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/src/main/java/com/example/security/starter/keycloak/feign/OAuth2FeignRequestInterceptor.java" afterDir="false" />
+    <list default="true" id="3b471ed0-8101-40ea-86a5-59f8e8fdb4b9" name="Changes" comment="adding the request interceptor to inject tokent to communicate between all the secured microservices">
+      <change afterPath="$PROJECT_DIR$/docker/configs/prometheus.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/tracing/tracing-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Gateway-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Gateway-Service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Payment-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Payment-Service.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Reporting-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Reporting-Service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keycloak-security-starter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/keycloak-security-starter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/keycloak-security-starter/src/main/resources/META-INF/spring.factories" beforeDir="false" afterPath="$PROJECT_DIR$/keycloak-security-starter/src/main/resources/META-INF/spring.factories" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/example/gatewayservice/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/example/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reporting-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingServiceApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,6 +87,12 @@
       <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\payment-service\src\main\java" />
       <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\docker" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\docker" />
+      <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\docker\apps\prometheus\configs" />
+      <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\docker\tracing\config" />
+      <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\docker\tracing\config\prometheus" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.reportingservice" />
     </key>
@@ -103,17 +111,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker.prometheus: Compose Deployment">
     <configuration name="All in e2e-test" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/e2e-test.http">
-      <method v="2" />
-    </configuration>
-    <configuration name="e2e-test | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/e2e-test.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="e2e-test | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/e2e-test.http" index="2" requestIdentifier="#2" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="e2e-test | #3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/e2e-test.http" index="3" requestIdentifier="#3" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -165,12 +164,46 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker.prometheus: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="prometheus" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="tracing/tracing-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker/tracing/tracing-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="tracing/tracing-compose.yml.prometheus: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="prometheus" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker/tracing/tracing-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Docker.docker.prometheus: Compose Deployment" />
+      <item itemvalue="Docker.tracing/tracing-compose.yml.prometheus: Compose Deployment" />
+      <item itemvalue="Docker.tracing/tracing-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.docker: Compose Deployment" />
       <item itemvalue="HTTP Request.All in e2e-test" />
-      <item itemvalue="HTTP Request.e2e-test | #1" />
-      <item itemvalue="HTTP Request.e2e-test | #2" />
-      <item itemvalue="HTTP Request.e2e-test | #3" />
       <item itemvalue="Spring Boot.ReportingServiceApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.EurikaServiceApplication" />
@@ -179,11 +212,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker.prometheus: Compose Deployment" />
+        <item itemvalue="Docker.tracing/tracing-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.tracing/tracing-compose.yml.prometheus: Compose Deployment" />
         <item itemvalue="Docker.docker: Compose Deployment" />
         <item itemvalue="HTTP Request.All in e2e-test" />
-        <item itemvalue="HTTP Request.e2e-test | #3" />
-        <item itemvalue="HTTP Request.e2e-test | #1" />
-        <item itemvalue="HTTP Request.e2e-test | #2" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +233,7 @@
       <workItem from="1689256573313" duration="5836000" />
       <workItem from="1689282293008" duration="12290000" />
       <workItem from="1689296154360" duration="4735000" />
-      <workItem from="1689321720396" duration="8056000" />
+      <workItem from="1689321720396" duration="17490000" />
     </task>
     <task id="LOCAL-00001" summary="first commit, setUp microservice infrastructure &amp; security with keycloak">
       <created>1689322881750</created>
@@ -223,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689326747974</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="adding the request interceptor to inject tokent to communicate between all the secured microservices">
+      <created>1689330688009</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689330688009</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +292,8 @@
     </ignored-roots>
     <MESSAGE value="first commit, setUp microservice infrastructure &amp; security with keycloak" />
     <MESSAGE value="adding feing client to communicate between microservices&#10;&#10;adding circuit breaker and a fallback processing to the methods of the feign client" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding feing client to communicate between microservices&#10;&#10;adding circuit breaker and a fallback processing to the methods of the feign client" />
+    <MESSAGE value="adding the request interceptor to inject tokent to communicate between all the secured microservices" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding the request interceptor to inject tokent to communicate between all the secured microservices" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

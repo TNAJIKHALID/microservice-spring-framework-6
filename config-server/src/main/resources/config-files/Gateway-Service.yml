@@ -42,6 +42,9 @@ eureka:
     preferIpAddress: true
 
 management:
+  tracing:
+    sampling:
+      probability: 1.0
   endpoints:
     web:
       exposure:
@@ -62,4 +65,7 @@ logging:
     '[com.netflix.eureka]': DEBUG
     '[com.netflix.discovery]': DEBUG
     '[com.netflix.discovery.shared.resolver.aws]': DEBUG
+    org.springframework.web: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 

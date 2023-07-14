@@ -43,7 +43,6 @@ services:
 
     ports:
       - "8081:8080"
-
 networks:
   bank:
     driver: bridge
