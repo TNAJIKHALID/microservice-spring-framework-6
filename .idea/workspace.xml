@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b471ed0-8101-40ea-86a5-59f8e8fdb4b9" name="Changes" comment="progress documentation">
+    <list default="true" id="3b471ed0-8101-40ea-86a5-59f8e8fdb4b9" name="Changes" comment="implementing retry pattern as a default filter in the gateway configuration">
+      <change afterPath="$PROJECT_DIR$/docker/tracing/promethues/prometheus.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Gateway-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Gateway-Service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,10 +104,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker.prometheus: Compose Deployment">
-    <configuration name="All in e2e-test" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$PROJECT_DIR$/e2e-test.http">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Docker.docker.redis: Compose Deployment">
     <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="config-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.configserver.ConfigServerApplication" />
@@ -167,6 +167,19 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker.redis: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="redis" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="tracing/tracing-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -190,10 +203,10 @@
     </configuration>
     <list>
       <item itemvalue="Docker.docker.prometheus: Compose Deployment" />
+      <item itemvalue="Docker.docker.redis: Compose Deployment" />
       <item itemvalue="Docker.tracing/tracing-compose.yml.prometheus: Compose Deployment" />
       <item itemvalue="Docker.tracing/tracing-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.docker: Compose Deployment" />
-      <item itemvalue="HTTP Request.All in e2e-test" />
       <item itemvalue="Spring Boot.ReportingServiceApplication" />
       <item itemvalue="Spring Boot.ConfigServerApplication" />
       <item itemvalue="Spring Boot.EurikaServiceApplication" />
@@ -202,11 +215,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker.redis: Compose Deployment" />
         <item itemvalue="Docker.docker.prometheus: Compose Deployment" />
         <item itemvalue="Docker.tracing/tracing-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.tracing/tracing-compose.yml.prometheus: Compose Deployment" />
         <item itemvalue="Docker.docker: Compose Deployment" />
-        <item itemvalue="HTTP Request.All in e2e-test" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +236,7 @@
       <workItem from="1689256573313" duration="5836000" />
       <workItem from="1689282293008" duration="12290000" />
       <workItem from="1689296154360" duration="4735000" />
-      <workItem from="1689321720396" duration="28277000" />
+      <workItem from="1689321720396" duration="32091000" />
     </task>
     <task id="LOCAL-00001" summary="first commit, setUp microservice infrastructure &amp; security with keycloak">
       <created>1689322881750</created>
@@ -288,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689363957806</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="implementing retry pattern as a default filter in the gateway configuration">
+      <created>1689367564278</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1689367564278</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +340,8 @@
     <MESSAGE value="adding the request interceptor to inject tokent to communicate between all the secured microservices" />
     <MESSAGE value="adding distributed tracing with project micrometer and zipkin" />
     <MESSAGE value="progress documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="progress documentation" />
+    <MESSAGE value="implementing retry pattern as a default filter in the gateway configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementing retry pattern as a default filter in the gateway configuration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

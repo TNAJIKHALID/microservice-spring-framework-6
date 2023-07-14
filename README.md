@@ -31,13 +31,12 @@ voici un example ![img.png](img.png)
 
 ### Résilience
 #### CircuitBreaker:
-Consiste a abondonner les requetes si la souce ne peut pas répondre dans ce cas on doit liberer la connexion, pour ne pas connsomer plus de ressource dans la source demandé, et pour ne pas envoyer plus dd requetes a un système en pane, pour implementer cette solution on a utiliser ...
+Consiste a abondonner les requetes si la souce ne peut pas répondre dans ce cas on doit liberer la connexion, pour ne pas connsomer plus de ressource dans la source demandé, et pour ne pas envoyer plus dd requetes a un système en pane, pour implementer cette solution on a utiliser spring-cloud-starter-circuitbreaker-reactor-resilience4j les fitres sont configure dans la configuration du gateway
 #### FallBackProcessing:
 Pour implementer le fallBackProcessing (Si par exemple un appel vers un microservice ne reussie pas on doit inmplementer un autre solution pour ne pas blocker le traitement) pour cela on a utilisé spring-cloud-starter-netflix-hystrix, dans tout nos clients feign on doit ajouter une fallBackMethode pour la gestion d'erreur voire un exemple [ReportingClient.java](payment-service%2Fsrc%2Fmain%2Fjava%2Fcom%2Fexample%2Fpaymentservice%2Fcontroller%2Ffeign%2FReportingClient.java)
-#### RateLimiting: 
 
 #### Retry:
-Le pattern retry a été implementer au nive&au de la gateway comme un filtre globale sur tout les requetes, on a implementer un solution consiste a faire tentative d'essai avec intervale de 50ms voir [Gateway-Service.yml](config-server%2Fsrc%2Fmain%2Fresources%2Fconfig-files%2FGateway-Service.yml)
+Le pattern retry a été implementer au nive&au de la gateway comme un filtre pour les requetes GET sur tout les requetes, on a implementer un solution consiste a faire tentative d'essai avec intervale de 50ms voir [Gateway-Service.yml](config-server%2Fsrc%2Fmain%2Fresources%2Fconfig-files%2FGateway-Service.yml)
 
 ### Déploiement et gestion des microservices
 
