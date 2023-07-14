@@ -42,3 +42,14 @@ eureka:
     lease-renewal-interval-in-seconds: 10
     lease-expiration-duration-in-seconds: 30
     preferIpAddress: true
+
+api:
+  reporting:
+    name: reporting-service
+feign:
+  hystrix:
+    enabled: true
+  circuitbreaker:
+    enabled: true
+hystrix:
+  shareSecurityContext: true

@@ -5,26 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b471ed0-8101-40ea-86a5-59f8e8fdb4b9" name="Changes" comment="first commit, setUp microservice infrastructure &amp; security with keycloak">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/java/com/example/configserver/ConfigServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Gateway-Service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Payment-Service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Reporting-Service.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-server/src/test/java/com/example/configserver/ConfigServerApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/.env" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docker/data_mysql/#ib_16384_0.dblwr" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docker/data_mysql/#ib_16384_1.dblwr" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docker/data_mysql/#innodb_temp/temp_1.ibt" afterDir="false" />
@@ -267,61 +247,16 @@
       <change afterPath="$PROJECT_DIR$/docker/data_mysql/sys/sys_config.ibd" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docker/data_mysql/undo_001" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docker/data_mysql/undo_002" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e2e-test.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/src/main/java/com/example/eurikaservice/EurikaServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/src/main/java/com/example/eurikaservice/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-service/src/test/java/com/example/eurikaservice/EurikaServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/example/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/test/java/com/example/gatewayservice/GatewayServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/src/main/java/com/example/security/starter/keycloak/KeycloakGrantedAuthoritiesConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/src/main/java/com/example/security/starter/keycloak/KeycloakJwtAuthenticationConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/src/main/java/com/example/security/starter/keycloak/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/src/main/resources/META-INF/spring.factories" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keycloak-security-starter/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/resources/bank.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/payment-service/src/test/java/com/example/paymentservice/PaymentServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reporting-service/src/test/java/com/example/reportingservice/ReportingServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/controller/feign/ReportingClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/controller/feign/fallBack/FallbackWithFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/controller/feign/fallBack/ReportingFallbackFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/controller/handler/ExceptionHandlers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Payment-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Payment-Service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/example/paymentservice/PaymentServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/reporting-service/src/main/java/com/example/reportingservice/ReportingController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -358,38 +293,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ktnaji/Documents/formation/mocroservice/TP/tp-parent/keycloak-security-starter/src/main/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/ktnaji/Documents/formation/mocroservice/TP/tp-parent/src/main/java/org/example/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;aaaf6a210cfa21dbdf0155f23d7ec1b7&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "corretto-17",
+    "last_opened_file_path": "C:/Users/ktnaji/Documents/formation/mocroservice/TP/tp-parent/payment-service/src/main/java/com/example/paymentservice/controller",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/ktnaji/Documents/formation/mocroservice/TP/tp-parent/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "aaaf6a210cfa21dbdf0155f23d7ec1b7",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\payment-service\src\main\java\com\example\paymentservice\controller" />
       <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\keycloak-security-starter\src\main\resources" />
       <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\payment-service\src\main\java" />
       <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\keycloak-security-starter\src\main\java\com\example\security\starter\keycloak" />
       <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\docker" />
-      <recent name="C:\Users\ktnaji\Documents\formation\mocroservice\TP\tp-parent\payment-service\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.reportingservice" />
@@ -506,8 +441,23 @@
       <workItem from="1689256573313" duration="5836000" />
       <workItem from="1689282293008" duration="12290000" />
       <workItem from="1689296154360" duration="4735000" />
-      <workItem from="1689321720396" duration="1083000" />
+      <workItem from="1689321720396" duration="4865000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit, setUp microservice infrastructure &amp; security with keycloak">
+      <created>1689322881750</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689322881750</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first commit, setUp microservice infrastructure &amp; security with keycloak">
+      <created>1689322902065</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689322902066</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
