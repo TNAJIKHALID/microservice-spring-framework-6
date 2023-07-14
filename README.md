@@ -46,4 +46,4 @@ voici un example ![img.png](img.png)
 <b>1. </b>`mvn spring-boot:run -f ./payment-service/pom.xml` </br>
 
 ## Start E2E tests
-`E2E test can be performed via : `[e2e-test.http](e2e-test.http)
+E2E test can be performed via postman by importing the following json collection: [Bank E2E.postman_collection.json](Bank%20E2E.postman_collection.json)
