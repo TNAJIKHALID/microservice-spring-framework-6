@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b471ed0-8101-40ea-86a5-59f8e8fdb4b9" name="Changes" comment="progress documentation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Gateway-Service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/src/main/resources/config-files/Gateway-Service.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +223,7 @@
       <workItem from="1689256573313" duration="5836000" />
       <workItem from="1689282293008" duration="12290000" />
       <workItem from="1689296154360" duration="4735000" />
-      <workItem from="1689321720396" duration="26709000" />
+      <workItem from="1689321720396" duration="28277000" />
     </task>
     <task id="LOCAL-00001" summary="first commit, setUp microservice infrastructure &amp; security with keycloak">
       <created>1689322881750</created>
@@ -279,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689363813052</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="progress documentation">
+      <created>1689363957806</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689363957806</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
