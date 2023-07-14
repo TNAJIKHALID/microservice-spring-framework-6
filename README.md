@@ -10,11 +10,10 @@ Le travaille consiste a identifiez les domaines les fonctionnalités qui peuvent
 </p>
 
 ### Conception de l'architecture cible:
-<p>
 Pour ce cas on a choisi de travaille avec l'infrastructre de spring cloud: Eureka, Config Server et Service Gateway, En résumé, Eureka facilite la découverte des services et leur interaction dynamique, le Config Server centralise la gestion des configurations des microservices, et le Service Gateway offre un point d'entrée centralisé pour l'accès aux services et des fonctionnalités supplémentaires de gestion de l'API. Ensemble, ces composants de Spring Cloud contribuent à simplifier et à faciliter le développement, le déploiement et la gestion d'une architecture de microservices
-<b>Configuration centralisée:</b> Dans notre cas la config est centralisé dans le projet config-server, on peut la faire dans un dossier dans la machine ou bien dans une repo git, ou bien dans le classpath, voir [application.yml](config-server%2Fsrc%2Fmain%2Fresources%2Fapplication.yml). elle fortement consellier d'utiliser une repo git mais dans notre cas en mode devlopment on a utilise le class path
+
+#### Configuration centralisée: Dans notre cas la config est centralisé dans le projet config-server, on peut la faire dans un dossier dans la machine ou bien dans une repo git, ou bien dans le classpath, voir [application.yml](config-server%2Fsrc%2Fmain%2Fresources%2Fapplication.yml). elle fortement consellier d'utiliser une repo git mais dans notre cas en mode devlopment on a utilise le class path
 le config server inclus la configuration de tous les microservices fontionnels + la config du service gateway (parceque cette config peut évoluer de faire est a mesure)
-</p>
 
 
 ### Sécurité
