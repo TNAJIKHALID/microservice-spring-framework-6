@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b471ed0-8101-40ea-86a5-59f8e8fdb4b9" name="Changes" comment="progress documentation">
-      <change afterPath="$PROJECT_DIR$/Bank E2E.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -222,7 +222,7 @@
       <workItem from="1689256573313" duration="5836000" />
       <workItem from="1689282293008" duration="12290000" />
       <workItem from="1689296154360" duration="4735000" />
-      <workItem from="1689321720396" duration="23457000" />
+      <workItem from="1689321720396" duration="26567000" />
     </task>
     <task id="LOCAL-00001" summary="first commit, setUp microservice infrastructure &amp; security with keycloak">
       <created>1689322881750</created>
@@ -266,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689350927733</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="progress documentation">
+      <created>1689351076735</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689351076735</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

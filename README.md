@@ -31,19 +31,29 @@ On travaille avec Spring boot 3 donc on a décidé de mettre en place un systèm
 voici un example ![img.png](img.png)
 
 ### Résilience
+#### CircuitBreaker:
+Consiste a abondonner les requetes si la souce ne peut pas répondre dans ce cas on doit liberer la connexion, pour ne pas connsomer plus de ressource dans la source demandé, et pour ne pas envoyer plus dd requetes a un système en pane, pour implementer cette solution on a utiliser ...
+#### FallBackProcessing:
+Pour implementer le fallBackProcessing (Si par exemple un appel vers un microservice ne reussie pas on doit inmplementer un autre solution pour ne pas blocker le traitement) pour cela on a utilisé spring-cloud-starter-netflix-hystrix, dans tout nos clients feign on doit ajouter une fallBackMethode pour la gestion d'erreur voire un exemple [ReportingClient.java](payment-service%2Fsrc%2Fmain%2Fjava%2Fcom%2Fexample%2Fpaymentservice%2Fcontroller%2Ffeign%2FReportingClient.java)
+#### RateLimiting: 
+
 
 ### Déploiement et gestion des microservices
 
 
 
-
-
-## Start infrastructure (Order is important)
+## Start Project
+### Start spring cloud infrastructure (Order is important)
 <b>1. </b>`mvn spring-boot:run -f ./eureka-service/pom.xml` </br>
 <b>2. </b>`mvn spring-boot:run -f ./config-server/pom.xml` </br>
 <b>3. </b>`mvn spring-boot:run -f ./gateway-service/pom.xml` </br>
-## Start projects (Order is not important)
+
+### Start tools
+`docker-compose -f ./docker/docker-compose.yml -d`
+`docker-compose -f ./docker/tracing/tracing-compose.yml -d`
+
+### Start projects (Order is not important)
 <b>1. </b>`mvn spring-boot:run -f ./payment-service/pom.xml` </br>
 
-## Start E2E tests
+### Start E2E tests
 E2E test can be performed via postman by importing the following json collection: [Bank E2E.postman_collection.json](Bank%20E2E.postman_collection.json)
