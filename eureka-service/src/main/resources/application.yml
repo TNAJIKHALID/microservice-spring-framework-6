@@ -1,0 +1,29 @@
+server:
+  port: 8761
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://eurekaUser:eurekaPassword@localhost:8761/eureka
+  server:
+    enable-self-preservation: false
+    evictionIntervalTimerInMs: 10000
+
+    
+spring:
+  security:
+    user:
+      name: eurekaUser
+      password: eurekaPassword
+  config:
+    import: optional:configserver:http://localhost:8888/
+
+
+logging:
+  level: 
+    '[com.netflix.eureka]': ERROR
+    '[com.netflix.discovery]': ERROR
+    '[com.netflix.discovery.shared.resolver.aws]': ERROR

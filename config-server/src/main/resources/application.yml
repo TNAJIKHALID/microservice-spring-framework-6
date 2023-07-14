@@ -1,0 +1,48 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations:
+          -  classpath:config-files/
+        bootstrap: true
+  security:
+    user:
+      name: usernameofyourchoice
+      password: passwordofyourchoice
+  profiles:
+    active:
+    - native
+ 
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eurekaUser:eurekaPassword@localhost:8761/eureka
+  instance:
+    preferIpAddress: true
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+
+info:
+  application:
+    name: '@project.name@'
+    version: '@project.version@'
+    
+logging:
+  level: 
+    '[com.netflix.eureka]': ERROR
+    '[com.netflix.discovery]': ERROR
+    '[com.netflix.discovery.shared.resolver.aws]': ERROR

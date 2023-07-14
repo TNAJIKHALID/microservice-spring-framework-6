@@ -1,0 +1,61 @@
+server:
+  port: 8283
+
+spring:
+  application:
+    name: GATEWAY-SERVICE
+  cloud:
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          '[/**]':
+             allowed-origins: "*"
+             allowed-methods: "*"
+             allowed-headers: "*"
+      routes:
+        - id: payment
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/payment/**
+          filters:
+            - RewritePath=/payment/(?<path>.*), /$\{path}
+        - id: reporting
+          uri: lb://Reporting-Service
+          predicates:
+            - Path=/reporting/**
+          filters:
+            - RewritePath=/reporting/(?<path>.*), /$\{path}
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://eurekaUser:eurekaPassword@localhost:8761/eureka
+  instance:
+    preferIpAddress: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: gateway
+    gateway:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+
+info:
+  application:
+    name: '@project.name@'
+    version: '@project.version@'
+logging:
+  level: 
+    '[com.netflix.eureka]': DEBUG
+    '[com.netflix.discovery]': DEBUG
+    '[com.netflix.discovery.shared.resolver.aws]': DEBUG
+

@@ -1,0 +1,44 @@
+keycloak:
+  enabled: true
+  resource: payment
+  realm: bank
+  auth-server-url: http://localhost:8081/auth
+
+#  HTLbmJI5bHKGsMDjEMKVkJsXm3MmnOUa
+server:
+  port: 9000
+spring:
+  main:
+     allow-bean-definition-overriding: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}
+          jwk-set-uri: ${keycloak.auth-server-url}/realms/${keycloak.realm}/protocol/openid-connect/certs
+
+cors:
+  allowedAdresses: http://localhost:8080, http://localhost:8081
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 15
+    fetch-registry: true
+    register-with-eureka: true
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://eurekaUser:eurekaPassword@localhost:8761/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+    preferIpAddress: true

@@ -1,0 +1,36 @@
+GET http://localhost:8283/payment/api/process/khalid
+Accept: application/json
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+###
+GET http://localhost:9000/api/process/khalid
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+###
+
+GET http://localhost:8761/eureka
+
+> {%
+    client.test("Test if eureka is secured", function() {
+        client.assert(response.status === 401, "Response status is not 401");
+    });
+%}
+###
+
+GET http://localhost:8283/reporting/api/tarnsactions/khalid
+
+> {%
+    client.test("Request executed successfully", function() {
+        client.assert(response.status === 200, "Response status is not 200");
+    });
+%}
+###
+

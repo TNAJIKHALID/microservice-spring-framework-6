@@ -1,0 +1,52 @@
+version: '3.5'
+services:
+  mysql-kc:
+    image: mysql:8.0.27
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_pwd
+      - MYSQL_USER=db-kc-admin
+      - MYSQL_PASSWORD=pa55wordingp
+      - MYSQL_DATABASE=keycloak
+    cap_add:
+      - SYS_NICE
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data_mysql:/var/lib/mysql
+    networks:
+      - bank
+
+  auth:
+    image: quay.io/keycloak/keycloak:19.0.1
+    environment:
+      - KC_HTTP_RELATIVE_PATH=/auth
+      - KC_PROXY=edge
+      - KC_HOSTNAME_STRICT="false"
+      - JDBC_PARAMS= "useSSL=false"
+      - KC_DB=mysql
+      - KC_DB_USERNAME=db-kc-admin
+      - KC_DB_PASSWORD=pa55wordingp
+      - KC_DB_URL_HOST=mysql-kc
+      - KC_DB_URL_PORT=3306
+      - KC_DB_SCHEMA=keycloak
+      - KEYCLOAK_ADMIN=socle
+      - KEYCLOAK_ADMIN_PASSWORD=P@ssw@rd
+      - JDBC_PARAMS= "connectTimeout=30000"
+      - PROXY_ADDRESS_FORWARDING="true"
+      - ROOT_LOGLEVEL=ALL
+      - DEBUG="true"
+    depends_on:
+      - mysql-kc
+    command:  start-dev
+    networks:
+      - bank
+
+    ports:
+      - "8081:8080"
+
+networks:
+  bank:
+    driver: bridge
+
+
+
