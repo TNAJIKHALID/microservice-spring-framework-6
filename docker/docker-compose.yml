@@ -1,4 +1,4 @@
-version: '3.5'
+version: '3.9'
 services:
   mysql-kc:
     image: mysql:8.0.27
@@ -15,9 +15,9 @@ services:
       - ./data_mysql:/var/lib/mysql
     networks:
       - bank
-
   auth:
     image: quay.io/keycloak/keycloak:19.0.1
+    restart: always
     environment:
       - KC_HTTP_RELATIVE_PATH=/auth
       - KC_PROXY=edge
@@ -37,15 +37,26 @@ services:
       - DEBUG="true"
     depends_on:
       - mysql-kc
-    command:  start-dev
+    command: start-dev
+    networks:
+      - bank
+    ports:
+      - "8081:8080"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    depends_on:
+      - mysql-kc
+    environment:
+      PMA_HOST: mysql-kc
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: root_pwd
+    ports:
+      - 8000:80
     networks:
       - bank
 
-    ports:
-      - "8081:8080"
 networks:
   bank:
     driver: bridge
-
-
-
