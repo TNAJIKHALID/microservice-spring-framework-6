@@ -10,12 +10,11 @@ Le travaille consiste a identifiez les domaines les fonctionnalités qui peuvent
 </p>
 
 ### Conception de l'architecture cible:
-<p>
 Pour ce cas on a choisi de travaille avec l'infrastructre de spring cloud: Eureka, Config Server et Service Gateway, En résumé, Eureka facilite la découverte des services et leur interaction dynamique, le Config Server centralise la gestion des configurations des microservices, et le Service Gateway offre un point d'entrée centralisé pour l'accès aux services et des fonctionnalités supplémentaires de gestion de l'API. Ensemble, ces composants de Spring Cloud contribuent à simplifier et à faciliter le développement, le déploiement et la gestion d'une architecture de microservices
-<b>Configuration centralisée:</b> Dans notre cas la config est centralisé dans le projet config-server, on peut la faire dans un dossier dans la machine ou bien dans une repo git, ou bien dans le classpath, voir [application.yml](config-server%2Fsrc%2Fmain%2Fresources%2Fapplication.yml). elle fortement consellier d'utiliser une repo git mais dans notre cas en mode devlopment on a utilise le class path
-le config server inclus la configuration de tous les microservices fontionnels + la config du service gateway (parceque cette config peut évoluer de faire est a mesure)
-</p>
 
+#### Configuration centralisée: 
+Dans notre cas la config est centralisé dans le projet config-server, on peut la faire dans un dossier dans la machine ou bien dans une repo git, ou bien dans le classpath, voir [application.yml](config-server%2Fsrc%2Fmain%2Fresources%2Fapplication.yml). elle fortement consellier d'utiliser une repo git mais dans notre cas en mode devlopment on a utilise le class path
+le config server inclus la configuration de tous les microservices fontionnels + la config du service gateway (parceque cette config peut évoluer de faire est a mesure)
 
 ### Sécurité
 #### Sécuriser notre infrastructure :
@@ -31,19 +30,33 @@ On travaille avec Spring boot 3 donc on a décidé de mettre en place un systèm
 voici un example ![img.png](img.png)
 
 ### Résilience
+#### CircuitBreaker:
+Consiste a abondonner les requetes si la souce ne peut pas répondre dans ce cas on doit liberer la connexion, pour ne pas connsomer plus de ressource dans la source demandé, et pour ne pas envoyer plus dd requetes a un système en pane, pour implementer cette solution on a utiliser spring-cloud-starter-circuitbreaker-reactor-resilience4j les fitres sont configure dans la configuration du gateway
+#### FallBackProcessing:
+Pour implementer le fallBackProcessing (Si par exemple un appel vers un microservice ne reussie pas on doit inmplementer un autre solution pour ne pas blocker le traitement) pour cela on a utilisé spring-cloud-starter-netflix-hystrix, dans tout nos clients feign on doit ajouter une fallBackMethode pour la gestion d'erreur voire un exemple [ReportingClient.java](payment-service%2Fsrc%2Fmain%2Fjava%2Fcom%2Fexample%2Fpaymentservice%2Fcontroller%2Ffeign%2FReportingClient.java)
+
+#### Retry:
+Le pattern retry a été implementer au nive&au de la gateway comme un filtre pour les requetes GET sur tout les requetes, on a implementer un solution consiste a faire tentative d'essai avec intervale de 50ms voir [Gateway-Service.yml](config-server%2Fsrc%2Fmain%2Fresources%2Fconfig-files%2FGateway-Service.yml)
 
 ### Déploiement et gestion des microservices
 
 
 
-
-
-## Start infrastructure (Order is important)
+## Start Project
+### Start spring cloud infrastructure (Order is important)
 <b>1. </b>`mvn spring-boot:run -f ./eureka-service/pom.xml` </br>
 <b>2. </b>`mvn spring-boot:run -f ./config-server/pom.xml` </br>
 <b>3. </b>`mvn spring-boot:run -f ./gateway-service/pom.xml` </br>
-## Start projects (Order is not important)
+
+### Start tools
+`docker-compose -f ./docker/docker-compose.yml -d`
+`docker-compose -f ./docker/tracing/tracing-compose.yml -d`
+#### SetUp Keycloak
+vous pouvez vous connecter avec le username est mot de pass présenat du admin présent dans le [docker-compose.yml](docker%2Fdocker-compose.yml) a l'adress 8081/auth et dans l'onglet master vous pouvez créer un nouveau realm, vous pouvez importer directement le fichier [realm-export.json](docker%2Fkeycloak%2Frealm-export.json), apres vous pouvez creer des user via l'interface graphique et les affecter des roles via l'onglet roles mapping
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+### Start projects (Order is not important)
 <b>1. </b>`mvn spring-boot:run -f ./payment-service/pom.xml` </br>
 
-## Start E2E tests
+### Start E2E tests
 E2E test can be performed via postman by importing the following json collection: [Bank E2E.postman_collection.json](Bank%20E2E.postman_collection.json)

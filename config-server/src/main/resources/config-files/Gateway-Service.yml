@@ -1,10 +1,6 @@
 server:
   port: 8283
 
-
-
-
-
 spring:
   application:
     name: GATEWAY-SERVICE
@@ -26,12 +22,29 @@ spring:
             - Path=/payment/**
           filters:
             - RewritePath=/payment/(?<path>.*), /$\{path}
+            - name: CircuitBreaker
+              args:
+                name: payment
+            - name: Retry
+              args:
+                retries: 3
+                method: GET
+                backoff:
+                  firstBackoff: 50ms
+                  maxBackoff: 500ms
         - id: reporting
           uri: lb://Reporting-Service
           predicates:
             - Path=/reporting/**
           filters:
             - RewritePath=/reporting/(?<path>.*), /$\{path}
+            - name: Retry
+              args:
+                retries: 3
+                method: GET
+                backoff:
+                  firstBackoff: 50ms
+                  maxBackoff: 500ms
 eureka:
   client:
     healthcheck:
@@ -69,3 +82,16 @@ logging:
   pattern:
     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 
+resilience4j:
+  circuitbreaker:
+    instances:
+      payment:
+        slidingWindowSize: 10
+        permittedNumberOfCallsInHalfOpenState: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10000
+        registerHealthIndicator: true
+  timelimiter:
+    instances:
+      bookService:
+        timeoutDuration: 3s
