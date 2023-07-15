@@ -1,13 +1,15 @@
 # TP microservice
 ## Description
-<p>
 La transformation d'une application monolithique en une architecture de microservices avec Spring Cloud est un processus complexe qui nécessite une planification et une attention particulières. Voici les étapes principales à suivre et les aspects à prendre en considération : <br/> 
-<b>1. Analyse de l'application existante: </b><br/> 
+
+### Analyse de l'application existante:
 Le travaille consiste a identifiez les domaines les fonctionnalités qui peuvent être décomposés en services indépendants. dans notre cas on a extarit 3 microservice:<br/> 
-    <b>a.</b>
-    <b>b.</b>
-    <b>c.</b>
-</p>
+
+#### Micro 1 
+#### Micro 2 
+#### Micro 3 
+
+
 
 ### Conception de l'architecture cible:
 Pour ce cas on a choisi de travaille avec l'infrastructre de spring cloud: Eureka, Config Server et Service Gateway, En résumé, Eureka facilite la découverte des services et leur interaction dynamique, le Config Server centralise la gestion des configurations des microservices, et le Service Gateway offre un point d'entrée centralisé pour l'accès aux services et des fonctionnalités supplémentaires de gestion de l'API. Ensemble, ces composants de Spring Cloud contribuent à simplifier et à faciliter le développement, le déploiement et la gestion d'une architecture de microservices
@@ -56,6 +58,8 @@ vous pouvez vous connecter avec le username est mot de pass présenat du admin p
 ![img_1.png](img_1.png)
 ![img_2.png](img_2.png)
 ### Start projects (Order is not important)
+<b>1. </b>`mvn spring-boot:run -f ./payment-service/pom.xml` </br>
+<b>1. </b>`mvn spring-boot:run -f ./payment-service/pom.xml` </br>
 <b>1. </b>`mvn spring-boot:run -f ./payment-service/pom.xml` </br>
 
 ### Start E2E tests

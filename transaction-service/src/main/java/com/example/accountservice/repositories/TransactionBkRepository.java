@@ -7,5 +7,5 @@ import java.util.Date;
 import java.util.List;
 
 public interface TransactionBkRepository extends JpaRepository<TransactionBk, Integer> {
-    List<TransactionBk> getTransactionBksByTrAndTransDateIsBetween(Date start, Date end);
+    //List<TransactionBk> getTransactionBksByTrAndTransDateIsBetween(Date start, Date end);
 }

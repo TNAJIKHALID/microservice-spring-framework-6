@@ -8,6 +8,16 @@ spring:
     gateway:
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+        - name: CircuitBreaker
+          args:
+            name: service
+        - name: Retry
+          args:
+            retries: 3
+            method: GET
+            backoff:
+              firstBackoff: 50ms
+              maxBackoff: 500ms
       globalcors:
         add-to-simple-url-handler-mapping: true
         corsConfigurations:
@@ -28,29 +38,12 @@ spring:
             - Path=/account/**
           filters:
             - RewritePath=/account/(?<path>.*), /$\{path}
-            - name: CircuitBreaker
-              args:
-                name: account
-            - name: Retry
-              args:
-                retries: 3
-                method: GET
-                backoff:
-                  firstBackoff: 50ms
-                  maxBackoff: 500ms
         - id: reporting
           uri: lb://Reporting-Service
           predicates:
             - Path=/reporting/**
           filters:
             - RewritePath=/reporting/(?<path>.*), /$\{path}
-            - name: Retry
-              args:
-                retries: 3
-                method: GET
-                backoff:
-                  firstBackoff: 50ms
-                  maxBackoff: 500ms
 eureka:
   client:
     healthcheck:
@@ -91,7 +84,7 @@ logging:
 resilience4j:
   circuitbreaker:
     instances:
-      account:
+      service:
         slidingWindowSize: 10
         permittedNumberOfCallsInHalfOpenState: 5
         failureRateThreshold: 50
@@ -99,5 +92,5 @@ resilience4j:
         registerHealthIndicator: true
   timelimiter:
     instances:
-      bookService:
+      service:
         timeoutDuration: 3s
