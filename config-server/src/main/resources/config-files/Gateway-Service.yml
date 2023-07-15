@@ -1,10 +1,6 @@
 server:
   port: 8283
 
-
-
-
-
 spring:
   application:
     name: GATEWAY-SERVICE
@@ -20,12 +16,18 @@ spring:
              allowed-methods: "*"
              allowed-headers: "*"
       routes:
-        - id: payment
-          uri: lb://PAYMENT-SERVICE
+        - id: transaction
+          uri: lb://TRANSACTION-SERVICE
           predicates:
-            - Path=/payment/**
+            - Path=/transaction/**
           filters:
-            - RewritePath=/payment/(?<path>.*), /$\{path}
+            - RewritePath=/transaction/(?<path>.*), /$\{path}
+        - id: account
+          uri: lb://ACCOUNT-SERVICE
+          predicates:
+            - Path=/account/**
+          filters:
+            - RewritePath=/account/(?<path>.*), /$\{path}
         - id: reporting
           uri: lb://Reporting-Service
           predicates:

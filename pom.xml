@@ -19,7 +19,8 @@
         <module>gateway-service</module>
         <module>config-server</module>
 
-        <module>payment-service</module>
+        <module>transaction-service</module>
+        <module>account-service</module>
         <module>reporting-service</module>
 
         <module>keycloak-security-starter</module>
