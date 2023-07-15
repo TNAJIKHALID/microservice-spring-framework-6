@@ -18,6 +18,7 @@ services:
 
   auth:
     image: quay.io/keycloak/keycloak:19.0.1
+    restart: always
     environment:
       - KC_HTTP_RELATIVE_PATH=/auth
       - KC_PROXY=edge
@@ -40,7 +41,6 @@ services:
     command:  start-dev
     networks:
       - bank
-
     ports:
       - "8081:8080"
 networks:
