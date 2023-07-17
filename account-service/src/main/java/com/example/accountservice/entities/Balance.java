@@ -24,6 +24,6 @@ public class Balance {
     private String accountType;
 
     @Column(name = "balance")
-    private Integer balance;
+    private Double balance;
 
 }
