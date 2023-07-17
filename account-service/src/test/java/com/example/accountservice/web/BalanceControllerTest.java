@@ -1,7 +1,7 @@
 package com.example.accountservice.web;
 
 import com.example.accountservice.entities.Balance;
-import com.example.accountservice.exception.AccountNotFindException;
+import com.example.accountservice.exception.AccountNotFoundException;
 import com.example.accountservice.services.BalanceService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -74,7 +74,7 @@ class BalanceControllerTest {
         when(balanceService.getBalance(testBalance.getAccountNo())).thenReturn(Optional.empty());
 
         // Perform the API call and verify the exception
-        assertThrows(AccountNotFindException.class, () -> balanceController.getBalance(testBalance.getAccountNo()));
+        assertThrows(AccountNotFoundException.class, () -> balanceController.getBalance(testBalance.getAccountNo()));
 
         // Verify the service method was called
         verify(balanceService, times(1)).getBalance(testBalance.getAccountNo());

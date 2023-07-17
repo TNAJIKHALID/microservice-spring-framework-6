@@ -1,6 +1,6 @@
-package com.example.accountservice.controller;
+package com.example.transactionservice.controller;
 
-import com.example.accountservice.controller.feign.ReportingClient;
+import com.example.transactionservice.controller.feign.ReportingClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

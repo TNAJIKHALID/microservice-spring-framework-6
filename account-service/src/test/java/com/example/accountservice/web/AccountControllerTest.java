@@ -1,7 +1,7 @@
 package com.example.accountservice.web;
 
 import com.example.accountservice.entities.Account;
-import com.example.accountservice.exception.AccountNotFindException;
+import com.example.accountservice.exception.AccountNotFoundException;
 import com.example.accountservice.services.AccountServices;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -76,7 +76,7 @@ class AccountControllerTest {
         Integer accountNo = 1;
         when(accountServices.getAccount(accountNo)).thenReturn(Optional.empty());
 
-        AccountNotFindException exception = assertThrows(AccountNotFindException.class,
+        AccountNotFoundException exception = assertThrows(AccountNotFoundException.class,
                 () -> accountController.getAccount(accountNo));
 
         assertEquals("Account not found", exception.getMessage());

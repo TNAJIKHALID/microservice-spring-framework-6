@@ -1,7 +1,7 @@
-package com.example.accountservice.controller.feign;
+package com.example.transactionservice.controller.feign;
 
 
-import com.example.accountservice.controller.feign.fallBack.ReportingFallbackFactory;
+import com.example.transactionservice.controller.feign.fallBack.ReportingFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 

@@ -1,4 +1,4 @@
-package com.example.accountservice.controller.handler;
+package com.example.transactionservice.controller.handler;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

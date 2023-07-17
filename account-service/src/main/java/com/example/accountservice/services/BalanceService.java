@@ -5,7 +5,7 @@ import com.example.accountservice.entities.Balance;
 import java.util.Optional;
 
 public interface BalanceService {
-    Balance updateBalance( Balance balance);
+    Balance updateBalance(Balance balance);
     Optional<Balance> getBalance(Integer accountNo);
 
 }

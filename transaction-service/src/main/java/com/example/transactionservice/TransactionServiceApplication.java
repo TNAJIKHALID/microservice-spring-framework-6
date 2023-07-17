@@ -1,4 +1,4 @@
-package com.example.accountservice;
+package com.example.transactionservice;
 
 import feign.Capability;
 import feign.micrometer.MicrometerCapability;
