@@ -19,8 +19,4 @@ public class AccountServiceApplication {
 		SpringApplication.run(AccountServiceApplication.class, args);
 	}
 
-	@Bean
-	public Capability capability(final MeterRegistry registry) {
-		return new MicrometerCapability(registry);
-	}
 }

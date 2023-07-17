@@ -9,6 +9,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 
 @Entity
 @Data
@@ -21,10 +23,18 @@ public class Account {
     @Column(name = "account_no")
     private Integer accountNo;
 
-    @Column(name = "username")
-    private String username;
+    @Column(name = "full_name")
+    private String fullName;
 
-    @Column(name = "password")
-    private String password;
+    @Column(name = "gender")
+    private String gender;
 
+    @Column(name = "birth_date")
+    private Date birthDate;
+
+    @Column(name = "mobile")
+    private String mobile;
+
+    @Column(name = "email")
+    private String email;
 }
