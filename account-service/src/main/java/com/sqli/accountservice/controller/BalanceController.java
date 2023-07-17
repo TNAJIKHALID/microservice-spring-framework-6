@@ -1,4 +1,4 @@
-package com.sqli.accountservice.web;
+package com.sqli.accountservice.controller;
 
 import com.sqli.accountservice.entities.Balance;
 import com.sqli.accountservice.exception.AccountNotFoundException;
