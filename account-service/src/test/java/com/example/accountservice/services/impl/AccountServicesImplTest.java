@@ -2,7 +2,7 @@ package com.example.accountservice.services.impl;
 
 import com.example.accountservice.entities.Account;
 import com.example.accountservice.entities.Balance;
-import com.example.accountservice.exception.AccountNotFindException;
+import com.example.accountservice.exception.AccountNotFoundException;
 import com.example.accountservice.repositories.AccountRepository;
 import com.example.accountservice.repositories.BalanceRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -73,7 +73,7 @@ class AccountServicesImplTest {
 
         when(accountRepository.findByAccountNo(accountNo)).thenReturn(Optional.empty());
 
-        AccountNotFindException exception = assertThrows(AccountNotFindException.class,
+        AccountNotFoundException exception = assertThrows(AccountNotFoundException.class,
                 () -> accountServices.update(updatedAccount));
 
         assertEquals("Account not find", exception.getMessage());
@@ -102,7 +102,7 @@ class AccountServicesImplTest {
 
         when(accountRepository.findByAccountNo(accountNo)).thenReturn(Optional.empty());
 
-        AccountNotFindException exception = assertThrows(AccountNotFindException.class,
+        AccountNotFoundException exception = assertThrows(AccountNotFoundException.class,
                 () -> accountServices.getAccount(accountNo));
 
         assertEquals("Account not find", exception.getMessage());

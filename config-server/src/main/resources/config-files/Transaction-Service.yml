@@ -57,8 +57,9 @@ eureka:
 
 #to check
 api:
-  reporting:
-    name: reporting-service
+  balance:
+    name: account-service
+    url: http://localhost:8283/account
 feign:
   hystrix:
     enabled: true

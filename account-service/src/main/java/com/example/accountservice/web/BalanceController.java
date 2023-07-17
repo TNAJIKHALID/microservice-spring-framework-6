@@ -1,7 +1,7 @@
 package com.example.accountservice.web;
 
 import com.example.accountservice.entities.Balance;
-import com.example.accountservice.exception.AccountNotFindException;
+import com.example.accountservice.exception.AccountNotFoundException;
 import com.example.accountservice.services.BalanceService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -25,7 +25,7 @@ public class BalanceController {
     @GetMapping("/{accountNo}")
     public ResponseEntity<Balance> getBalance(@PathVariable Integer accountNo) {
         Balance balance = balanceService.getBalance(accountNo)
-                .orElseThrow(() -> new AccountNotFindException("Balance not found"));
+                .orElseThrow(() -> new AccountNotFoundException("Balance not found"));
         return new ResponseEntity<>(balance, HttpStatus.OK);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.accountservice.entities;
+package com.example.transactionservice.entities;
 
 
 import jakarta.persistence.Column;
@@ -27,7 +27,7 @@ public class TransactionBk {
     private Date transDate;
 
     @Column(name = "amount")
-    private Integer amount;
+    private Double amount;
 
     @Column(name = "trans_type")
     private String transType;

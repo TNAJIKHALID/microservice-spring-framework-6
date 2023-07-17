@@ -1,4 +1,4 @@
-package com.example.accountservice.controller.feign.fallBack;
+package com.example.transactionservice.controller.feign.fallBack;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.openfeign.FallbackFactory;

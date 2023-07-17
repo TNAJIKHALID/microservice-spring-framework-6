@@ -2,9 +2,9 @@ package com.example.accountservice.services.impl;
 
 import com.example.accountservice.entities.Account;
 import com.example.accountservice.entities.Balance;
-import com.example.accountservice.exception.AccountNotFindException;
 import com.example.accountservice.repositories.AccountRepository;
 import com.example.accountservice.repositories.BalanceRepository;
+import com.example.accountservice.exception.AccountNotFoundException;
 import com.example.accountservice.services.AccountServices;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -30,13 +30,13 @@ public class AccountServicesImpl implements AccountServices {
     @Override
     public Account update(Account account) {
         Account a = accountRepository.findByAccountNo(account.getAccountNo()).orElseThrow(()
-                -> new AccountNotFindException("Account not find"));
+                -> new AccountNotFoundException("Account not find"));
         return accountRepository.save(account);
     }
     @Override
     public Optional<Account> getAccount(Integer accountNo) {
         return Optional.ofNullable(accountRepository.findByAccountNo(accountNo).orElseThrow(()
-                -> new AccountNotFindException("Account not find")));
+                -> new AccountNotFoundException("Account not find")));
     }
 
 }

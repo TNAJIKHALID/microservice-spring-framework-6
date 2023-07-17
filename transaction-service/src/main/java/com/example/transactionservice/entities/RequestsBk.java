@@ -1,4 +1,4 @@
-package com.example.accountservice.entities;
+package com.example.transactionservice.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,7 +29,7 @@ public class RequestsBk {
     private Integer toAccount;
 
     @Column(name = "amount")
-    private Integer amount;
+    private Double amount;
 
     @Column(name = "message")
     private String message;
