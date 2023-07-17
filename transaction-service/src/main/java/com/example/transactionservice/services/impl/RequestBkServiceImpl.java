@@ -13,7 +13,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 @Service
 @AllArgsConstructor
@@ -25,7 +26,7 @@ public class RequestBkServiceImpl implements RequestBkService {
     @Transactional
     @Override
     public RequestsBk createRequest(RequestsBk requestsBk) {
-        requestsBk.setRequestDate(new Date());
+        requestsBk.setRequestDate(LocalDate.now());
         requestsBk.setHasViewed(false);
         requestsBk.setStatus("in progress");
         return requestsBkRepository.save(requestsBk);
@@ -39,7 +40,7 @@ public class RequestBkServiceImpl implements RequestBkService {
 
         TransactionBk transactionBk = TransactionBk.builder()
                 .toAccount(requestsBk.getToAccount())
-                .transDate(new Date())
+                .transDate(LocalDate.now())
                 .accountNo(requestsBk.getAccountNo())
                 .amount(requestsBk.getAmount())
                 .purpose(requestsBk.getMessage())

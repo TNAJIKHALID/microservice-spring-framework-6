@@ -10,7 +10,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 @Entity
 @Data
@@ -24,7 +25,7 @@ public class TransactionBk {
     private Integer transId;
 
     @Column(name = "trans_date")
-    private Date transDate;
+    private LocalDate transDate;
 
     @Column(name = "amount")
     private Double amount;

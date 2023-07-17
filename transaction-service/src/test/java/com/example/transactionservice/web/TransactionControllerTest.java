@@ -1,8 +1,10 @@
 package com.example.transactionservice.web;
 
+import com.example.transactionservice.controller.TransactionController;
 import com.example.transactionservice.entities.TransactionBk;
 import com.example.transactionservice.exception.TransactionNotFoundException;
 import com.example.transactionservice.services.TransactionService;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -10,8 +12,8 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -60,8 +62,8 @@ public class TransactionControllerTest {
     @Test
     public void testGetStatement_ValidParameters_ReturnsStatement() {
         Integer accountNo = 123;
-        Date startDate = new Date();
-        Date endDate = new Date();
+        LocalDate startDate = LocalDate.now();
+        LocalDate endDate = LocalDate.now();
         List<TransactionBk> statement = Arrays.asList(new TransactionBk(), new TransactionBk());
         when(transactionService.getStatement(accountNo, startDate, endDate)).thenReturn(statement);
 

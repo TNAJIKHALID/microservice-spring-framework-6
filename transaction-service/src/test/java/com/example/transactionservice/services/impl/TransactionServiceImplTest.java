@@ -12,8 +12,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -64,8 +64,8 @@ public class TransactionServiceImplTest {
     public void testGetStatement_ReturnsListOfTransactionBks() {
         // Arrange
         int accountNo = 123;
-        Date startDate = new Date();
-        Date endDate = new Date();
+        LocalDate startDate = LocalDate.now();
+        LocalDate endDate = LocalDate.now();
         List<TransactionBk> transactionBks = new ArrayList<>();
         Mockito.when(transactionBkRepository.getTransactionBksByAccountNoAndTransDateIsBetween(accountNo, startDate, endDate))
                 .thenReturn(transactionBks);

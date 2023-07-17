@@ -38,12 +38,6 @@ spring:
             - Path=/account/**
           filters:
             - RewritePath=/account/(?<path>.*), /$\{path}
-        - id: reporting
-          uri: lb://Reporting-Service
-          predicates:
-            - Path=/reporting/**
-          filters:
-            - RewritePath=/reporting/(?<path>.*), /$\{path}
 eureka:
   client:
     healthcheck:

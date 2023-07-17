@@ -9,7 +9,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 @Entity
 @Data
@@ -41,6 +42,6 @@ public class RequestsBk {
     private String status;
 
     @Column(name = "request_date")
-    private Date requestDate;
+    private LocalDate requestDate;
 
 }

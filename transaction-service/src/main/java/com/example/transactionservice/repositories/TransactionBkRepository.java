@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -13,8 +13,8 @@ public interface TransactionBkRepository extends JpaRepository<TransactionBk, In
     @Query("SELECT T FROM TransactionBk T WHERE T.accountNo = :accountNo AND T.transDate BETWEEN :start AND :end")
     List<TransactionBk> getTransactionBksByAccountNoAndTransDateIsBetween(
             @Param("accountNo") Integer accountNo,
-            @Param("start") Date start,
-            @Param("end") Date end
+            @Param("start") LocalDate start,
+            @Param("end") LocalDate end
     );
 
     Optional<TransactionBk> findByTransId(Integer transId);

@@ -1,31 +1,37 @@
 package com.example.transactionservice.controller;
 
-import com.example.transactionservice.controller.feign.ReportingClient;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import com.example.transactionservice.entities.TransactionBk;
+import com.example.transactionservice.exception.TransactionNotFoundException;
+import com.example.transactionservice.services.TransactionService;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.time.LocalDate;
+import java.util.List;
 
 @RestController
-@RequestMapping("/api/process")
-@Slf4j
-@RequiredArgsConstructor
+@RequestMapping("/api/v1/transactions")
+@AllArgsConstructor
 public class TransactionController {
 
-    private final ReportingClient reportingClient;
+    private final TransactionService transactionService;
 
+    @GetMapping("/{transId}")
+    public ResponseEntity<TransactionBk> getTransaction(@PathVariable Integer transId) {
+        TransactionBk transaction = transactionService.getTransactionBk(transId)
+                .orElseThrow(() -> new TransactionNotFoundException("Transaction not found"));
 
-    @PreAuthorize("hasAnyRole('USER')")
-    @GetMapping(value = "/{name}")
-    public ResponseEntity<String> getClient(@PathVariable("name") String name) {
-        log.info("request to api to process name: {}", name);
-        reportingClient.findAllData().forEach(log::info);
-        return new ResponseEntity<>(String.format("hello %s", name ), HttpStatus.OK);
+        return new ResponseEntity<>(transaction, HttpStatus.OK);
+    }
+
+    @GetMapping("/statement")
+    public ResponseEntity<List<TransactionBk>> getStatement(@RequestParam Integer accountNo,
+                                                            @RequestParam LocalDate startDate,
+                                                            @RequestParam LocalDate endDate) {
+        List<TransactionBk> statement = transactionService.getStatement(accountNo, startDate, endDate);
+
+        return new ResponseEntity<>(statement, HttpStatus.OK);
     }
 }
-

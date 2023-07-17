@@ -1,4 +1,4 @@
-package com.example.transactionservice.web;
+package com.example.transactionservice.controller;
 
 import com.example.transactionservice.entities.RequestsBk;
 import com.example.transactionservice.entities.TransactionBk;

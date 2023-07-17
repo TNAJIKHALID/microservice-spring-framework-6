@@ -8,7 +8,7 @@ import com.example.transactionservice.services.TransactionService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,7 +25,7 @@ public class TransactionServiceImpl implements TransactionService {
     }
 
     @Override
-    public List<TransactionBk> getStatement(Integer accountNo, Date startDate, Date endDate) {
+    public List<TransactionBk> getStatement(Integer accountNo, LocalDate startDate, LocalDate endDate) {
         List<TransactionBk> transactionBks = transactionBkRepository
                 .getTransactionBksByAccountNoAndTransDateIsBetween(accountNo,startDate,endDate);
         return transactionBks;

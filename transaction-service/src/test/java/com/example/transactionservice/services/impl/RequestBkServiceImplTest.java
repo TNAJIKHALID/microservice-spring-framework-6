@@ -17,7 +17,7 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.ResponseEntity;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.Optional;
 
 public class RequestBkServiceImplTest {
@@ -77,7 +77,7 @@ public class RequestBkServiceImplTest {
 
         TransactionBk transactionBk = TransactionBk.builder()
                 .toAccount(requestsBk.getToAccount())
-                .transDate(new Date())
+                .transDate(LocalDate.now())
                 .accountNo(requestsBk.getAccountNo())
                 .amount(requestsBk.getAmount())
                 .purpose(requestsBk.getMessage())
